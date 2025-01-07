@@ -9,11 +9,15 @@ const Navbar = () => {
         <input type="text" placeholder="Search..." className="w-[200px] p-2 bg-transparent outline-none"/>
       </div>
       <div className="flex items-center gap-6 justify-end w-full">
+        <div className="bg-white rounded-full w-7 h-7 flex items-center justify-center cursor-pointer relative">
+          <Image src="/announcement.png" alt="notification" width={25} height={25}/>
+          <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white rounded-full text-xs">1</div>
+        </div>
         <div className="flex flex-col">
           <span className="text-[15px] leading-3 font-medium">Đức Mạnh</span>
           <span className="text-[13px] text-gray-500 text-right">Admin</span>
         </div>
-        <Image src="/avatar.png" alt="avatar" width={36} height={36} className="rounded-full"/>
+        <Image src="/avatar.png" alt="avatar" width={36} height={36} className="rounded-full "/>
       </div>
     </div>
   );
