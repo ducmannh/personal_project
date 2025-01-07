@@ -9,8 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        colorSky: "#C3EBFA",
+        colorSkyLight: "#EDF9FD",
+        colorPurple: "#CFCEFF",
+        colorPurpleLight: "#F1F0FF",
+        colorYellow: "#FAE27C",
+        colorYellowLight: "#FEFCE8",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
