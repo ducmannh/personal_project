@@ -38,6 +38,16 @@ const data = [
     present: 65,
     absent: 55,
   },
+  {
+    name: "Sat",
+    present: 65,
+    absent: 55,
+  },
+  {
+    name: "Sun",
+    present: 65,
+    absent: 55,
+  },
 ];
 
 const AttendanceChart = () => {
