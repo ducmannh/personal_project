@@ -55,7 +55,7 @@ const StudentsPageList = () => {
   const renderRow = (item: Student) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-colorPurpleLight"
+      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-colorPurpleLight dark:even:bg-gray-700 dark:hover:bg-colorPurpleDark dark:border-gray-700"
     >
       <td className="flex items-center gap-4 p-4">
         <Image
@@ -67,7 +67,7 @@ const StudentsPageList = () => {
         />
         <div className="flex flex-col">
           <h3 className="font-semibold">{item.name}</h3>
-          <p className="text-xs text-gray-500">{item.class}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{item.class}</p>
         </div>
       </td>
       <td className="hidden md:table-cell">{item.studentId}</td>
@@ -77,8 +77,13 @@ const StudentsPageList = () => {
       <td>
         <div className="flex items-center gap-2">
           <Link href={`/list/students/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-colorSky">
-              <Image src="/view.png" alt="view" width={16} height={16} />
+            <button className="w-9 h-9 flex items-center justify-center rounded-full bg-colorSkyDark">
+              <Image
+                src="/raphael--view.png"
+                alt="view"
+                width={24}
+                height={24}
+              />
             </button>
           </Link>
           {role === "admin" && (
@@ -90,7 +95,7 @@ const StudentsPageList = () => {
   );
 
   return (
-    <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
+    <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0 dark:bg-gray-800 dark:text-white">
       <div className="flex items-center justify-between">
         <h1 className="hidden md:block text-lg font-semibold">All students</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">

@@ -62,6 +62,10 @@
   background-color: #f7fdff !important;
 }
 
+.dark .rbc-timeslot-group {
+  background-color: #374151 !important;
+}
+
 .rbc-day-slot {
   font-size: 14px !important;
 }
@@ -103,3 +107,12 @@
   color: gray !important;
   margin-bottom: 5px;
 }
+
+.dark .rbc-today {
+  background-color: #5EB3E8;
+}
+
+.rbc-time-slot {
+  border-top: none !important;
+}
+

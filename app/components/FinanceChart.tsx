@@ -11,6 +11,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import useDarkMode from "../store/useDarkMode";
 
 const data = [
   {
@@ -76,8 +77,10 @@ const data = [
 ];
 
 const FinanceChart = () => {
+  const darkMode = useDarkMode((state) => state.darkMode);
+
   return (
-    <div className="bg-white rounded-xl w-full h-full p-4">
+    <div className="bg-white rounded-xl w-full h-full p-4 dark:bg-gray-700 dark:text-white">
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Finance</h1>
         <Image src="/moreDark.png" alt="moreDark" width={20} height={20} />
@@ -109,7 +112,13 @@ const FinanceChart = () => {
             tickLine={false}
             tickMargin={20}
           />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              borderRadius: "10px",
+              borderColor: "lightgray",
+              backgroundColor: darkMode ? "#2E3440" : "#FAFAFA",
+            }}
+          />
           <Legend
             align="center"
             verticalAlign="top"
@@ -118,13 +127,13 @@ const FinanceChart = () => {
           <Line
             type="monotone"
             dataKey="income"
-            stroke="#C3EBFA"
+            stroke={darkMode ? "#82CFFD" : "#C3EBFA"}
             strokeWidth={5}
           />
           <Line
             type="monotone"
             dataKey="expense"
-            stroke="#CFCEFF"
+            stroke={darkMode ? "#9B9BFF" : "#CFCEFF"}
             strokeWidth={5}
           />
         </LineChart>

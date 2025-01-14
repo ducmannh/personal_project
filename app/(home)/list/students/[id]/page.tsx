@@ -50,7 +50,7 @@ const StudentPageSingle = () => {
           {/* SMALL CARDS */}
           <div className="flex-1 flex gap-4 justify-between flex-wrap">
             {/* CARD */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] text-gray-600 dark:text-white dark:bg-gray-700">
               <Image
                 src="/singleAttendance.png"
                 alt=""
@@ -60,11 +60,11 @@ const StudentPageSingle = () => {
               />
               <div className="">
                 <h1 className="text-xl font-semibold">90%</h1>
-                <span className="text-sm text-gray-400">Attendance</span>
+                <span className="text-sm text-gray-600 dark:text-white">Attendance</span>
               </div>
             </div>
             {/* CARD */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] text-gray-600 dark:text-white dark:bg-gray-700">
               <Image
                 src="/singleBranch.png"
                 alt=""
@@ -74,11 +74,11 @@ const StudentPageSingle = () => {
               />
               <div className="">
                 <h1 className="text-xl font-semibold">6th</h1>
-                <span className="text-sm text-gray-400">Grade</span>
+                <span className="text-sm text-gray-600 dark:text-white">Grade</span>
               </div>
             </div>
             {/* CARD */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] text-gray-600 dark:text-white dark:bg-gray-700">
               <Image
                 src="/singleLesson.png"
                 alt=""
@@ -88,11 +88,11 @@ const StudentPageSingle = () => {
               />
               <div className="">
                 <h1 className="text-xl font-semibold">18</h1>
-                <span className="text-sm text-gray-400">Lessons</span>
+                <span className="text-sm text-gray-600 dark:text-white">Lessons</span>
               </div>
             </div>
             {/* CARD */}
-            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%]">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] text-gray-600 dark:text-white dark:bg-gray-700">
               <Image
                 src="/singleClass.png"
                 alt=""
@@ -102,32 +102,32 @@ const StudentPageSingle = () => {
               />
               <div className="">
                 <h1 className="text-xl font-semibold">6A</h1>
-                <span className="text-sm text-gray-400">Class</span>
+                <span className="text-sm text-gray-600 dark:text-white">Class</span>
               </div>
             </div>
           </div>
         </div>
         {/* BOTTOM */}
-        <div className="mt-4 bg-white rounded-md p-4">
+        <div className="mt-4 bg-white rounded-md p-4 dark:bg-gray-700 dark:text-white">
           <h1 className="text-xl font-semibold mb-2">Student&apos;s Schedule</h1>
           <BigCalendar />
         </div>
       </div>
       {/* RIGHT */}
       <div className="w-full xl:w-1/3 flex flex-col gap-4">
-        <div className="bg-white p-4 rounded-md">
+        <div className="bg-white p-4 rounded-md dark:bg-gray-700 dark:text-white">
           <h1 className="text-xl font-semibold">Shortcuts</h1>
-          <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-            <Link className="p-3 rounded-md bg-colorSkyLight" href="/">
+          <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500 dark:text-gray-800">
+            <Link className="p-3 rounded-md bg-colorSkyLight dark:bg-colorSkyDark" href="/">
               Student&apos;s Lessons
             </Link>
-            <Link className="p-3 rounded-md bg-colorPurpleLight" href="/">
+            <Link className="p-3 rounded-md bg-colorPurpleLight dark:bg-colorPurpleDark" href="/">
               Student&apos;s Teachers
             </Link>
-            <Link className="p-3 rounded-md bg-pink-50" href="/">
+            <Link className="p-3 rounded-md bg-pink-50 dark:bg-colorYellowDark" href="/">
               Student&apos;s Exams
             </Link>
-            <Link className="p-3 rounded-md bg-colorSkyLight" href="/">
+            <Link className="p-3 rounded-md bg-colorSkyLight dark:bg-pink-500" href="/">
               Student&apos;s Assignments
             </Link>
             <Link className="p-3 rounded-md bg-colorYellowLight" href="/">

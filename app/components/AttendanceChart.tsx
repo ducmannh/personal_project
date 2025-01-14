@@ -11,6 +11,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import useDarkMode from "../store/useDarkMode";
 
 const data = [
   {
@@ -51,8 +52,10 @@ const data = [
 ];
 
 const AttendanceChart = () => {
+  const darkMode = useDarkMode((state) => state.darkMode);
+
   return (
-    <div className="bg-white rounded-lg p-4 h-full">
+    <div className="bg-white rounded-lg p-4 h-full dark:bg-gray-700 dark:text-white">
       <div className="flex justify-between items-center">
         <h1 className="text-lg font-semibold">Attendance</h1>
         <Image src="/moreDark.png" alt="moreDark" width={20} height={20} />
@@ -69,7 +72,11 @@ const AttendanceChart = () => {
           />
           <YAxis axisLine={false} tick={{ fill: "#d1d5db" }} tickLine={false} />
           <Tooltip
-            contentStyle={{ borderRadius: "10px", borderColor: "lightgray" }}
+            contentStyle={{
+              borderRadius: "10px",
+              borderColor: "lightgray",
+              backgroundColor: darkMode ? "#2E3440" : "#FAFAFA",
+            }}
           />
           <Legend
             align="left"

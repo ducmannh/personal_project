@@ -11,10 +11,13 @@ export default {
       colors: {
         colorSky: "#C3EBFA",
         colorSkyLight: "#EDF9FD",
+        colorSkyDark: "#5EB3E8",
         colorPurple: "#CFCEFF",
         colorPurpleLight: "#F1F0FF",
+        colorPurpleDark: "#7C7BE5",
         colorYellow: "#FAE27C",
         colorYellowLight: "#FEFCE8",
+        colorYellowDark: "#C9A544",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -23,5 +26,6 @@ export default {
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 } satisfies Config;

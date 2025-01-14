@@ -44,7 +44,7 @@ const AssignmentsPageList = () => {
   const renderRow = (item: Assignment) => (
     <tr
       key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-colorPurpleLight"
+      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-colorPurpleLight dark:even:bg-gray-700 dark:hover:bg-colorPurpleDark dark:border-gray-700"
     >
       <td className="flex items-center gap-4 p-4">{item.subject}</td>
       <td>{item.class}</td>
@@ -64,7 +64,7 @@ const AssignmentsPageList = () => {
   );
 
   return (
-    <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
+    <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0 dark:bg-gray-800 dark:text-white">
       <div className="flex items-center justify-between">
         <h1 className="hidden md:block text-lg font-semibold">
           All Assignments
