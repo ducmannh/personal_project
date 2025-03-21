@@ -1,3 +1,4 @@
+"use client";
 import Announcement from "@/app/components/Announcement";
 import AttendanceChart from "@/app/components/AttendanceChart";
 import CountChart from "@/app/components/CountChart";

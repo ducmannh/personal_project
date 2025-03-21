@@ -2,9 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import useDarkMode from "../store/useDarkMode";
+import useAuthStore from "../store/useAuthStore";
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const { accessToken, logout } = useAuthStore();
 
   return (
     <div className="flex items-center justify-between p-4">
@@ -34,10 +36,24 @@ const Navbar = () => {
             1
           </div>
         </div>
-        <div className="flex flex-col">
-          <span className="text-[15px] leading-3 font-medium dark:text-gray-300">Đức Mạnh</span>
-          <span className="text-[13px] text-gray-500 text-right">Admin</span>
-        </div>
+        {accessToken ? (
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-700 dark:text-gray-300">
+              Xin chào
+            </span>
+            <button
+              onClick={logout}
+              className="text-sm text-red-500 hover:underline"
+            >
+              Đăng xuất
+            </button>
+          </div>
+        ) : (
+          <a href="/login" className="text-sm text-blue-500 hover:underline">
+            Đăng nhập
+          </a>
+        )}
+
         <Image
           src="/avatar.png"
           alt="avatar"

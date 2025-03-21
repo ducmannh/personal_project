@@ -5,6 +5,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import React from "react";
 import useDarkMode from "../store/useDarkMode";
+import useAuth from "../hooks/useAuth";
 
 export default function HomeLayout({
   children,
@@ -13,7 +14,8 @@ export default function HomeLayout({
 }>) {
   const setDarkMode = useDarkMode((state) => state.setDarkMode);
   const { darkMode } = useDarkMode();
-
+  useAuth();
+  
   React.useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
@@ -33,7 +35,9 @@ export default function HomeLayout({
             className="flex items-center justify-center lg:justify-start p-4 gap-2"
           >
             <Image src="/logo.png" alt="logo" width={32} height={32} />
-            <span className="hidden lg:block font-semibold dark:text-white">Dashboard</span>
+            <span className="hidden lg:block font-semibold dark:text-white">
+              Dashboard
+            </span>
           </Link>
           <Menu />
         </div>
